@@ -15,7 +15,7 @@
 
 ## Description
 
-CMMV (Contract-Model-Model-View) is a minimalistic and modular framework for building scalable applications in TypeScript. Inspired by modern design patterns, CMMV uses contracts to define the entire application, from ORM entities to REST controllers and WebSocket endpoints, allowing for a highly structured and maintainable codebase.
+The ``@cmmv/swagger`` module provides an automated solution for generating Swagger API documentation based on the contracts defined in the CMMV application. The ``SwaggerTranspiler`` class processes the contracts, extracting information such as controller names, fields, and request/response types. It generates a complete OpenAPI 3.0 specification, including routes for CRUD operations, data schemas, and authentication routes if the ``@cmmv/auth`` module is present. The module integrates security schemes, adds necessary paths for login, registration, and user management, and handles the inclusion of common request/response formats. The generated output is written to a ``swagger.json`` file, which can be used with Swagger UI or similar tools to provide interactive API documentation.
 
 ## Installation
 
