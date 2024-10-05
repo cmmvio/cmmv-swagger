@@ -32,17 +32,19 @@ Below is a simple example of how to create a new CMMV application:
 ```typescript
 import { Application } from "@cmmv/core";
 import { DefaultAdapter, DefaultHTTPModule } from "@cmmv/http";
-import { ApplicationModule } from "./app.module";
+import { AuthModule } from "@cmmv/auth";
+import { SwaggerModule } from "@cmmv/swagger";
 
 Application.create({
-    httpAdapter: DefaultAdapter,    
+    httpAdapter: DefaultAdapter,
+    wsAdapter: null,
     modules: [
-        DefaultHTTPModule,
-        ApplicationModule
+        DefaultHTTPModule, 
+        AuthModule,
+        SwaggerModule
     ],
-    services: [...],
     contracts: [...]
-});
+})
 ```
 
 ## Documentation
