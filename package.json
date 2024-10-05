@@ -1,47 +1,49 @@
 {
-	"name": "@cmmv/swagger",
-	"version": "0.0.1",
-	"main": "dist/index.js",
-	"scripts": {
-		"test": "mocha",
-		"dev": "NODE_ENV=dev ts-node ./src/dev.ts",
-		"build": "tsc",
-		"release": "node scripts/release.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/andrehrferreira/cmmv-swagger.git"
-	},
-	"keywords": [
-		"cmmv",
-		"swagger"
-	],
-	"author": "Andre Ferreira",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/andrehrferreira/cmmv-swagger/issues"
-	},
-	"homepage": "https://github.com/andrehrferreira/cmmv-swagger#readme",
-	"description": "",
-	"dependencies": {
-		"@cmmv/core": "^0.3.18",
-		"swagger-autogen": "^2.23.7",
-		"swagger-jsdoc": "^6.2.8",
-		"swagger-ui-dist": "^5.17.14",
-		"swagger-ui-express": "^5.0.1"
-	},
-	"devDependencies": {
-		"@cmmv/auth": "^0.3.18",
-		"@cmmv/http": "^0.3.18",
-		"@cmmv/protobuf": "^0.3.18",
-		"@types/chai": "^5.0.0",
-		"@types/mocha": "^10.0.8",
-		"@types/node": "^22.7.4",
-		"chai": "^5.1.1",
-		"mocha": "^10.7.3",
-		"prettier": "^3.3.3",
-		"ts-node": "^10.9.2",
-		"tsconfig-paths": "^4.2.0",
-		"typescript": "^5.6.2"
-	}
+    "name": "@cmmv/swagger",
+    "version": "0.0.6",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "mocha",
+        "dev": "NODE_ENV=dev ts-node ./src/dev.ts",
+        "build": "tsc",
+        "release": "node scripts/release.js",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/andrehrferreira/cmmv-swagger.git"
+    },
+    "keywords": [
+        "cmmv",
+        "swagger"
+    ],
+    "author": "Andre Ferreira",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/andrehrferreira/cmmv-swagger/issues"
+    },
+    "homepage": "https://github.com/andrehrferreira/cmmv-swagger#readme",
+    "description": "",
+    "dependencies": {
+        "@cmmv/core": "^0.3.18",
+        "conventional-changelog": "^6.0.0",
+        "conventional-changelog-cli": "^5.0.0",
+        "enquirer": "^2.4.1",
+        "execa": "^9.4.0",
+        "semver": "^7.6.3"
+    },
+    "devDependencies": {
+        "@cmmv/auth": "^0.3.18",
+        "@cmmv/http": "^0.3.18",
+        "@cmmv/protobuf": "^0.3.18",
+        "@types/chai": "^5.0.0",
+        "@types/mocha": "^10.0.8",
+        "@types/node": "^22.7.4",
+        "chai": "^5.1.1",
+        "mocha": "^10.7.3",
+        "prettier": "^3.3.3",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.6.2"
+    }
 }
