@@ -3,14 +3,13 @@
 </p>
 <p align="center">Contract-Model-Model-View (CMMV) <br/> A minimalistic framework for building scalable and modular applications using TypeScript contracts.</p>
 <p align="center">
-    <a href="https://www.npmjs.com/package/@cmmv/core"><img src="https://img.shields.io/npm/v/@cmmv/core.svg" alt="NPM Version" /></a>
-    <a href="https://github.com/andrehrferreira/cmmv/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@cmmv/core.svg" alt="Package License" /></a>
-    <a href="https://dl.circleci.com/status-badge/redirect/circleci/QyJWAYrZ9JTfN1eubSDo5u/7gdwcdqbMYfbYYX4hhoNhc/tree/main" target="_blank"><img src="https://dl.circleci.com/status-badge/img/circleci/QyJWAYrZ9JTfN1eubSDo5u/7gdwcdqbMYfbYYX4hhoNhc/tree/main.svg" alt="CircleCI" /></a>
+    <a href="https://www.npmjs.com/package/@cmmv/swagger"><img src="https://img.shields.io/npm/v/@cmmv/swagger.svg" alt="NPM Version" /></a>
+    <a href="https://github.com/andrehrferreira/cmmv-swagger/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@cmmv/swagger.svg" alt="Package License" /></a>
 </p>
 
 <p align="center">
   <a href="https://cmmv.io">Documentation</a> &bull;
-  <a href="https://github.com/andrehrferreira/cmmv/issues">Report Issue</a>
+  <a href="https://github.com/andrehrferreira/cmmv-swagger/issues">Report Issue</a>
 </p>
 
 ## Description
