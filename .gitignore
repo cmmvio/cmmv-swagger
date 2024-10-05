@@ -47,3 +47,10 @@ yarn.lock
 # Gsuite
 googleapis.json
 newrelic.js
+
+src/contracts
+src/models
+src/services
+src/app.module.ts
+!src/controllers/swagger.controller.ts
+src/controllers/user.controller.ts

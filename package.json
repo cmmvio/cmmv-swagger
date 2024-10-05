@@ -1,26 +1,47 @@
 {
-  "name": "@cmmv/swagger",
-  "version": "0.0.1",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/andrehrferreira/cmmv-swagger.git"
-  },
-  "keywords": [
-    "cmmv",
-    "swagger"
-  ],
-  "author": "Andre Ferreira",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andrehrferreira/cmmv-swagger/issues"
-  },
-  "homepage": "https://github.com/andrehrferreira/cmmv-swagger#readme",
-  "description": "",
-  "dependencies": {
-    "@cmmv/core": "^0.3.15"
-  }
+	"name": "@cmmv/swagger",
+	"version": "0.0.1",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "mocha",
+		"dev": "NODE_ENV=dev ts-node ./src/dev.ts",
+		"build": "tsc",
+		"release": "node scripts/release.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/andrehrferreira/cmmv-swagger.git"
+	},
+	"keywords": [
+		"cmmv",
+		"swagger"
+	],
+	"author": "Andre Ferreira",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/andrehrferreira/cmmv-swagger/issues"
+	},
+	"homepage": "https://github.com/andrehrferreira/cmmv-swagger#readme",
+	"description": "",
+	"dependencies": {
+		"@cmmv/core": "^0.3.18",
+		"swagger-autogen": "^2.23.7",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-dist": "^5.17.14",
+		"swagger-ui-express": "^5.0.1"
+	},
+	"devDependencies": {
+		"@cmmv/auth": "^0.3.18",
+		"@cmmv/http": "^0.3.18",
+		"@cmmv/protobuf": "^0.3.18",
+		"@types/chai": "^5.0.0",
+		"@types/mocha": "^10.0.8",
+		"@types/node": "^22.7.4",
+		"chai": "^5.1.1",
+		"mocha": "^10.7.3",
+		"prettier": "^3.3.3",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "^5.6.2"
+	}
 }
