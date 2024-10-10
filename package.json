@@ -4,7 +4,7 @@
     "main": "dist/index.js",
     "scripts": {
         "test": "mocha",
-        "dev": "NODE_ENV=dev ts-node ./src/dev.ts",
+        "dev": "NODE_ENV=dev node -r @swc-node/register ./src/dev.ts",
         "build": "tsc",
         "release": "node scripts/release.js",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
@@ -25,25 +25,29 @@
     "homepage": "https://github.com/andrehrferreira/cmmv-swagger#readme",
     "description": "",
     "dependencies": {
-        "@cmmv/core": "^0.3.18",
+        "@cmmv/core": "^0.4.1",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.1",
         "conventional-changelog": "^6.0.0",
         "conventional-changelog-cli": "^5.0.0",
         "enquirer": "^2.4.1",
         "execa": "^9.4.0",
+        "jsonwebtoken": "^9.0.2",
         "semver": "^7.6.3"
     },
     "devDependencies": {
-        "@cmmv/auth": "^0.3.18",
-        "@cmmv/http": "^0.3.18",
-        "@cmmv/protobuf": "^0.3.18",
+        "@cmmv/auth": "^0.4.1",
+        "@cmmv/http": "^0.4.1",
+        "@cmmv/protobuf": "^0.4.1",
+        "@swc-node/core": "^1.13.3",
+        "@swc-node/register": "^1.10.9",
+        "@swc/helpers": "^0.5.13",
         "@types/chai": "^5.0.0",
         "@types/mocha": "^10.0.8",
         "@types/node": "^22.7.4",
         "chai": "^5.1.1",
         "mocha": "^10.7.3",
         "prettier": "^3.3.3",
-        "ts-node": "^10.9.2",
-        "tsconfig-paths": "^4.2.0",
         "typescript": "^5.6.2"
     }
 }

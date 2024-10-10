@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://cmmv.io/" target="blank"><img src="https://raw.githubusercontent.com/andrehrferreira/cmmv/main/public/assets/logo.png" width="300" alt="CMMV Logo" /></a>
+  <a href="https://cmmv.io/" target="blank"><img src="https://raw.githubusercontent.com/andrehrferreira/cmmv/main/public/assets/logo_CMMV_negativa.svg" width="300" alt="CMMV Logo" /></a>
 </p>
 <p align="center">Contract-Model-Model-View (CMMV) <br/> A minimalistic framework for building scalable and modular applications using TypeScript contracts.</p>
 <p align="center">
@@ -21,7 +21,7 @@ The ``@cmmv/swagger`` module provides an automated solution for generating Swagg
 CMMV is available as a collection of npm packages. To install the core package, use npm:
 
 ```bash
-$ npm install @cmmv/swagger
+$ pnpm add @cmmv/swagger
 ```
 
 ## Quick Start

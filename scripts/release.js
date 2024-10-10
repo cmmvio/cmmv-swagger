@@ -1,17 +1,30 @@
-import fs from 'fs';
-import path from 'path';
-import chalk from 'chalk';
-import semver from 'semver';
-import { execa } from 'execa';
-import { cwd } from 'process';
-import enquirer from 'enquirer';
+const fs = require('fs');
+const path = require('path');
+const chalk = require('chalk');
+const semver = require('semver');
+const { spawn } = require('child_process');
+const { cwd } = require('process');
+const enquirer = require('enquirer');
 
 const { prompt } = enquirer;
 const currentVersion = JSON.parse(fs.readFileSync(path.resolve(cwd(), 'package.json'), "utf-8")).version;
 const versionIncrements = ['patch', 'minor', 'major'];
 
 const inc = (i) => semver.inc(currentVersion, i);
-const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', ...opts });
+const run = (bin, args, opts = {}) => {
+    return new Promise((resolve, reject) => {
+        const child = spawn(bin, args, { stdio: 'inherit', ...opts });
+
+        child.on('close', (code) => {
+            if (code !== 0) {
+                reject(new Error(`${bin} ${args.join(' ')} failed with code ${code}`));
+                return;
+            }
+            resolve();
+        });
+    });
+};
+
 const step = (msg) => console.log(chalk.cyan(msg));
 
 async function main() {
