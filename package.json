@@ -1,6 +1,6 @@
 {
     "name": "@cmmv/swagger",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "main": "dist/index.js",
     "description": "CMMV integration with Swagger for documentation creation",
     "scripts": {

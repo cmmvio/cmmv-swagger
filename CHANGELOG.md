@@ -1,3 +1,12 @@
+## [0.4.3](https://github.com/andrehrferreira/cmmv-swagger/compare/v0.4.2...v0.4.3) (2024-12-10)
+
+
+### Bug Fixes
+
+* readme ([233492b](https://github.com/andrehrferreira/cmmv-swagger/commit/233492bb313b9a581cfde294ed5bc7d3459b9620))
+
+
+
 ## [0.4.2](https://github.com/andrehrferreira/cmmv-swagger/compare/v0.0.6...v0.4.2) (2024-11-27)
 
 
