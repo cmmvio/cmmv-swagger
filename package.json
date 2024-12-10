@@ -2,12 +2,12 @@
     "name": "@cmmv/swagger",
     "version": "0.4.2",
     "main": "dist/index.js",
-    "description": "CMMV (@swagger)",
+    "description": "CMMV integration with Swagger for documentation creation",
     "scripts": {
         "test": "mocha",
         "dev": "NODE_ENV=dev node -r @swc-node/register ./src/dev.ts",
         "build": "tsc",
-        "release": "node scripts/release.js",
+        "release": "node release.js",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
     },
     "repository": {
