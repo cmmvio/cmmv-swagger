@@ -1,3 +1,12 @@
+## [0.4.4](https://github.com/cmmvio/cmmv-swagger/compare/v0.4.3...v0.4.4) (2025-01-24)
+
+
+### Bug Fixes
+
+* repository ([7392549](https://github.com/cmmvio/cmmv-swagger/commit/739254939849d1d1c1e086dcd2bb1ae9368c8e0d))
+
+
+
 ## [0.4.3](https://github.com/cmmvio/cmmv-swagger/compare/v0.4.2...v0.4.3) (2024-12-10)
 
 
