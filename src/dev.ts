@@ -13,5 +13,4 @@ Application.create({
         AuthModule,
         SwaggerModule
     ],
-    //contracts: [UserContract]
 })
