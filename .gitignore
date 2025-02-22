@@ -54,3 +54,5 @@ src/services
 src/app.module.ts
 !src/controllers/swagger.controller.ts
 src/controllers/user.controller.ts
+.generated
+public
