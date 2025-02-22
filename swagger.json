@@ -96,6 +96,174 @@
                 }
             }
         },
+        "/groups": {
+            "get": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Retrieve all groups",
+                "responses": {
+                    "200": {
+                        "description": "Successful retrieval of groups",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/groups"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Add a new groups",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/groups"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/groups"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "groups created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/groups"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{id}": {
+            "get": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Get groups by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the groups to retrieve"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved groups",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/groups"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Update groups by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the groups to update"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/groups"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/groups"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "groups updated",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/groups"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Delete groups by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the groups to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "groups deleted",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "affected": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/user": {
             "get": {
                 "tags": [
@@ -263,6 +431,174 @@
                     }
                 }
             }
+        },
+        "/sessions": {
+            "get": {
+                "tags": [
+                    "sessions"
+                ],
+                "summary": "Retrieve all sessions",
+                "responses": {
+                    "200": {
+                        "description": "Successful retrieval of sessions",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/sessions"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "sessions"
+                ],
+                "summary": "Add a new sessions",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sessions"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sessions"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "sessions created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/sessions"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/sessions/{id}": {
+            "get": {
+                "tags": [
+                    "sessions"
+                ],
+                "summary": "Get sessions by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the sessions to retrieve"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved sessions",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/sessions"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "sessions"
+                ],
+                "summary": "Update sessions by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the sessions to update"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sessions"
+                            }
+                        },
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/sessions"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "sessions updated",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/sessions"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "sessions"
+                ],
+                "summary": "Delete sessions by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID of the sessions to delete"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "sessions deleted",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "affected": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -331,6 +667,17 @@
                     }
                 }
             },
+            "groups": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "roles": {
+                        "type": "string"
+                    }
+                }
+            },
             "user": {
                 "type": "object",
                 "properties": {
@@ -340,10 +687,78 @@
                     "password": {
                         "type": "string"
                     },
-                    "googleId": {
+                    "provider": {
                         "type": "string"
                     },
                     "groups": {
+                        "type": "string"
+                    },
+                    "roles": {
+                        "type": "string"
+                    },
+                    "root": {
+                        "type": "boolean"
+                    },
+                    "blocked": {
+                        "type": "boolean"
+                    },
+                    "validated": {
+                        "type": "boolean"
+                    },
+                    "verifyEmail": {
+                        "type": "boolean"
+                    },
+                    "verifyEmailCode": {
+                        "type": "integer"
+                    },
+                    "verifySMS": {
+                        "type": "boolean"
+                    },
+                    "verifySMSCode": {
+                        "type": "integer"
+                    },
+                    "optSecret": {
+                        "type": "string"
+                    },
+                    "optSecretVerify": {
+                        "type": "boolean"
+                    },
+                    "profile": {
+                        "type": "string"
+                    }
+                }
+            },
+            "sessions": {
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "string"
+                    },
+                    "fingerprint": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "type": "string"
+                    },
+                    "ipAddress": {
+                        "type": "string"
+                    },
+                    "device": {
+                        "type": "string"
+                    },
+                    "browser": {
+                        "type": "string"
+                    },
+                    "os": {
+                        "type": "string"
+                    },
+                    "revoked": {
+                        "type": "boolean"
+                    },
+                    "userAgent": {
+                        "type": "string"
+                    },
+                    "refreshToken": {
                         "type": "string"
                     }
                 }
